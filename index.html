@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://kit.fontawesome.com/fc1fdbbcc9.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lotto checker</title>
+  <link rel='stylesheet' href='style.css'>
+  </style>
+  <script src="script.js" defer></script>
+  <script src="background.js" defer></script>
+  <script src="lottoAPI.js" async></script>
+</head>
+
+<body>
+  <div id="background"></div>
+  <div id="overlay"></div>
+  <div class="container">
+    <p>Twoje liczby będą sprawdzone dla losowania z dnia: <label id="drawDate"></label></p>
+    <div id="board">
+      <div id="numbers">
+        <div id="close">X</div>
+      </div>
+      <button id="saveYourTicket">Dodaj</button>
+    </div>
+    <div class="tickets">
+      <div class="title">Twoje zestawy liczbowe:</div>
+    </div>
+    <div class="buttons">
+      <button id="addYourTicket">Dodaj zestaw</button>
+      <button id="checkResults">Sprawdź wyniki!</button>
+    </div>
+  </div>
+</body>
+
+</html>
