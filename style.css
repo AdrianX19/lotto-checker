@@ -23,7 +23,6 @@
 }
 
 .container {
-  margin: 20px;
   text-align: center;
   border: 3px solid black;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
@@ -230,4 +229,47 @@ p {
   padding: 10px 25px;
   border-radius: 12px;
   margin: 5px 5px;
+}
+
+#drawNumbers {
+  background-color: black;
+  display: block;
+  width: 50%;
+  margin: 4px auto 0px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+@keyframes fade {
+  0% {
+    background-color: black;
+  }
+
+  100% {
+    background-color: white;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 80%;
+    margin: 80px auto;
+  }
+
+  #board {
+    width: 95%;
+  }
+
+  .bcgNum {
+    margin: 4px;
+  }
+
+  #background {
+    width: 110vw;
+    height: 110vh;
+    left: -8px;
+    top: -8px;
+  }
 }

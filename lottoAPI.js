@@ -1,4 +1,5 @@
 const drawDateLabel = document.querySelector('#drawDate')
+const drawingNumbers = document.querySelector('#drawNumbers')
 const drawingResult = []
 
 async function getLastLottoDrawingDetails() {
@@ -20,9 +21,18 @@ async function getDrawingResults() {
     drawingResult.push(drawDetails['Num' + i])
   }
   console.log(drawingResult)
+  return drawingResult
 }
 
 window.addEventListener('load', async (event) => {
   drawDateLabel.textContent = await getDrawingDate()
   await getDrawingResults()
 });
+
+drawingNumbers.addEventListener('click', async () => {
+  drawingNumbers.textContent = drawingResult
+  drawingNumbers.style.backgroundColor = 'white'
+  drawingNumbers.style.color = 'black'
+  drawingNumbers.style.animation = 'fade 1s'
+  drawingNumbers.style.cursor = 'default'
+})
